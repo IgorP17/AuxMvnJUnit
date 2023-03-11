@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e736f37-716f-4a50-a7ff-ca1ee245d99f" name="Changes" comment="lesson 1">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2e736f37-716f-4a50-a7ff-ca1ee245d99f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Vector2DTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Vector2DTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.NetworkUtilsTest">
+  <component name="RunManager" selected="JUnit.Vector2DTest">
     <configuration name="MyMathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AuxMvnJUnit" />
       <option name="PACKAGE_NAME" value="" />
@@ -77,9 +76,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Vector2DTest" />
         <item itemvalue="JUnit.NetworkUtilsTest" />
         <item itemvalue="JUnit.MyMathTest" />
-        <item itemvalue="JUnit.Vector2DTest" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678519982365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="lesson 1">
+      <created>1678520142456</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678520142456</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
