@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e736f37-716f-4a50-a7ff-ca1ee245d99f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/for_divide.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyMathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyMathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NetworkUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NetworkUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Vector2DTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Vector2DTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.Vector2DTest">
+  <component name="RunManager" selected="JUnit.MyMathTest">
     <configuration name="MyMathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AuxMvnJUnit" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,9 +77,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyMathTest" />
         <item itemvalue="JUnit.Vector2DTest" />
         <item itemvalue="JUnit.NetworkUtilsTest" />
-        <item itemvalue="JUnit.MyMathTest" />
       </list>
     </recent_temporary>
   </component>
@@ -122,13 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678521193386</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="move to junit 5">
+      <created>1678522022084</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678522022084</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="lesson 1" />
     <MESSAGE value="lesson 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 2" />
+    <MESSAGE value="move to junit 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="move to junit 5" />
   </component>
 </project>
