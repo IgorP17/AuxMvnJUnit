@@ -1,11 +1,11 @@
 import org.example.MyMath;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class MyMathTest {
-
-
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void checkZeroDenomShouldThrowException() {
-        int a = MyMath.divide(1, 0);
+        Assertions.assertThrowsExactly(ArithmeticException.class, () -> MyMath.divide(1, 0));
     }
 }

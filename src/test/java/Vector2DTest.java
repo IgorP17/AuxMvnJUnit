@@ -1,30 +1,30 @@
 import org.example.Vector2D;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class Vector2DTest {
 
     private static final double EPS = 1e-9;
     private Vector2D v1;
 
-    @Before
+    @BeforeEach
     public void createNewVector(){
-        v1 = new Vector2D(); // свой для каждого метода, если нужно 1 раз перед тестами - static BeforeClass
+        v1 = new Vector2D(); // свой для каждого метода, если нужно 1 раз перед тестами - static BeforeClass/BeforeAll JUnit 5
     }
 
     @Test
     public void newVectorShouldHaveZeroLength() {
-        Assert.assertEquals(0, v1.length(), EPS);
+        Assertions.assertEquals(0, v1.length(), EPS);
     }
 
     @Test
     public void newVectorShouldHaveZeroX() {
-        Assert.assertEquals(0, v1.getX(), EPS);
+        Assertions.assertEquals(0, v1.getX(), EPS);
     }
 
     @Test
     public void newVectorShouldHaveZeroY() {
-        Assert.assertEquals(0, v1.getY(), EPS);
+        Assertions.assertEquals(0, v1.getY(), EPS);
     }
 }
