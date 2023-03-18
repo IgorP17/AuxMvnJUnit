@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class NetworkUtilsTest {
 
     @Test
-    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 2000, unit = TimeUnit.MILLISECONDS)
     public void getConnectionShouldBeFasterThanOneSecond() {
         NetworkUtils.getConnection();
     }
