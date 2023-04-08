@@ -2,11 +2,11 @@
   {
     "name": "Проблема A",
     "matchedStatuses": ["broken", "failed"],
-    "messageRegex": ".*aaa.*"
+    "messageRegex": ".*a.*"
   },
   {
     "name": "Проблема Б",
     "matchedStatuses": ["broken", "failed"],
-    "messageRegex": ".*bbb.*"
+    "messageRegex": ".*b.*"
   }
 ]
