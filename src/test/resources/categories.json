@@ -2,7 +2,7 @@
   {
     "name": "Проблема A",
     "matchedStatuses": ["broken", "failed"],
-    "messageRegex": ".*a.*"
+    "traceRegex": ".*aaa.*"
   },
   {
     "name": "Проблема Б",
