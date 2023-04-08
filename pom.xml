@@ -16,6 +16,8 @@
         <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
         <maven.compliler.plugin.version>3.8.1</maven.compliler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M6</maven.surefire.plugin.version>
+        <aspectj.version>1.9.9.1</aspectj.version>
+        <allure-junit5.version>2.21.0</allure-junit5.version>
     </properties>
 
     <dependencyManagement>
@@ -35,6 +37,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- allure junit 5 -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure-junit5.version}</version>
         </dependency>
     </dependencies>
 
@@ -61,6 +69,31 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/allure-results</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
+                <configuration>
+                    <reportVersion>2.11.2</reportVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>
