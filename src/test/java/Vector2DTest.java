@@ -37,4 +37,9 @@ public class Vector2DTest {
     public void thisTestWillFail2(){
         Assertions.assertEquals(4, 3, "cat 222");
     }
+
+    @Test
+    public void thisTestWillFail3(){
+        Assertions.assertEquals(4, 3, "aaaaaaaa");
+    }
 }
