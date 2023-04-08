@@ -18,6 +18,7 @@
         <maven.surefire.plugin.version>3.0.0-M6</maven.surefire.plugin.version>
         <aspectj.version>1.9.9.1</aspectj.version>
         <allure-junit5.version>2.21.0</allure-junit5.version>
+        <allure-maven.version>2.11.2</allure-maven.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +54,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven.jar.plugin.version}</version>
                 <configuration>
+                    <!--> For jar create -->
                     <archive>
                         <index>true</index>
                         <manifest>
@@ -76,7 +78,7 @@
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                            <value>io.qameta.allure.junit5.AllureJunit5</value>
                         </property>
                     </properties>
                     <systemProperties>
@@ -90,9 +92,9 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.11.2</version>
+                <version>${allure-maven.version}</version>
                 <configuration>
-                    <reportVersion>2.11.2</reportVersion>
+                    <reportVersion>${allure-maven.version}</reportVersion>
                 </configuration>
             </plugin>
         </plugins>
