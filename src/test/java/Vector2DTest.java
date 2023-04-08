@@ -27,4 +27,14 @@ public class Vector2DTest {
     public void newVectorShouldHaveZeroY() {
         Assertions.assertEquals(0, v1.getY(), EPS);
     }
+
+    @Test
+    public void thisTestWillFail1(){
+        Assertions.fail("Category 1");
+    }
+
+    @Test
+    public void thisTestWillFail2(){
+        Assertions.fail("Category 2");
+    }
 }
