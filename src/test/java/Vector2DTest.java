@@ -30,16 +30,16 @@ public class Vector2DTest {
 
     @Test
     public void thisTestWillFail1(){
-        Assertions.assertEquals(1, 2, "cat 111");
+        Assertions.assertEquals("aaa", "2");
     }
 
     @Test
     public void thisTestWillFail2(){
-        Assertions.assertEquals(4, 3, "cat 222");
+        Assertions.assertEquals("aaa", "3");
     }
 
     @Test
     public void thisTestWillFail3(){
-        Assertions.assertEquals(4, 3, "aaaaaaaa");
+        Assertions.assertEquals("bbb", "4");
     }
 }
