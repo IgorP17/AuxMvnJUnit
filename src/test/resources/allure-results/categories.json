@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Проблема A",
+    "matchedStatuses": ["broken", "failed"],
+    "messageRegex": ".*aaa.*"
+  },
+  {
+    "name": "Проблема Б",
+    "matchedStatuses": ["broken", "failed"],
+    "messageRegex": ".*bbb.*"
+  }
+]
