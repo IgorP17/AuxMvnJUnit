@@ -8,5 +8,10 @@
     "name": "Проблема Б",
     "matchedStatuses": ["broken", "failed"],
     "messageRegex": ".*bbb.*"
+  },
+  {
+    "name": "Нет данных",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*NullPointerException.*"
   }
 ]

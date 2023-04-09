@@ -1,3 +1,5 @@
+package org.example;
+
 import org.example.NetworkUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

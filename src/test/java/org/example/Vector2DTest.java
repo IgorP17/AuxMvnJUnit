@@ -1,3 +1,5 @@
+package org.example;
+
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.example.Vector2D;

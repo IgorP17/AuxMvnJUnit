@@ -1,3 +1,5 @@
+package org.example;
+
 import io.qameta.allure.*;
 import org.example.MyMath;
 import org.junit.jupiter.api.Assertions;

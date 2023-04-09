@@ -1,3 +1,5 @@
+package org.example;
+
 import org.example.MyMessage;
 import org.example.MyMessageFields;
 import org.junit.jupiter.api.Assertions;
