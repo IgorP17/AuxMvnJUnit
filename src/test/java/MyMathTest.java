@@ -117,7 +117,7 @@ public class MyMathTest {
     }
 
     /*
-        Linking
+        Linking and owner
      */
 
     @Test
@@ -125,6 +125,7 @@ public class MyMathTest {
     @TmsLinks({@TmsLink(value = "TL-135"), @TmsLink(value = "TL-158")})
     @Links(value = {@Link(name = "Ссылка1", url = "http://sberbank.ru"),
             @Link(name = "Ссылка2", url = "http://yandex.ru")})
+    @Owner(value = "Пупкин Валерий Иванович")
     public void linksTest() {
         Assertions.assertTrue(1 == 1);
     }
