@@ -11,4 +11,12 @@ public class MyMath {
     public static int sum(int a, int b) {
         return a + b;
     }
+
+    public static int subtraction(int a, int b) {
+        return a - b;
+    }
+
+    public static int hypotenuse(int a, int b) {
+        return (int) Math.sqrt(a * a + b * b);
+    }
 }

@@ -1,6 +1,4 @@
-import io.qameta.allure.Attachment;
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.example.MyMath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -42,10 +40,40 @@ public class MyMathTest {
         Assertions.assertEquals(expectedResult, MyMath.sum(num1, num2), "Результат не соответствует ожидаемому значению");
     }
 
+    @Epic(value = "Математика")
+    @Feature(value = "Простые математические операции")
+    @Story(value = "Сложение")
     @Test
     public void sumTest() {
         checkSumStep(3, 2, 5);
         checkSumStep(5, 4, 9);
+    }
+
+    @Step("Проверка разности числа {num1} и числа {num2}")
+    public static void checkSubtractionStep(int num1, int num2, int expectedResult) {
+        Assertions.assertEquals(expectedResult, MyMath.subtraction(num1, num2), "Результат не соответствует ожидаемому значению");
+    }
+
+    @Epic(value = "Математика")
+    @Feature(value = "Простые математические операции")
+    @Story(value = "Вычитание")
+    @Test
+    public void substTest() {
+        checkSubtractionStep(3, 2, 1);
+        checkSubtractionStep(3, 4, -1);
+    }
+
+    @Step("Проверка гипотенузы с катетами {num1} и {num2}")
+    public static void checkHypotenuseStep(int num1, int num2, int expectedResult) {
+        Assertions.assertEquals(expectedResult, MyMath.hypotenuse(num1, num2), "Результат не соответствует ожидаемому значению");
+    }
+
+    @Epics(value = {@Epic(value = "Математика"), @Epic(value = "Геометрия")})
+    @Features(value = {@Feature(value = "Тригонометрия"), @Feature(value = "Простые математические операции")})
+    @Stories(value = {@Story(value = "Треугольники"), @Story(value = "Прямоугольные треугольники")})
+    @Test
+    public void checkHypotenuseTest() {
+        checkHypotenuseStep(3, 4, 5);
     }
 
     /*
