@@ -82,6 +82,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compliler.plugin.version}</version>
             </plugin>
+            <!-- Surefire with Allure -->
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
@@ -129,6 +130,12 @@
                                     <directory>src/test/resources</directory>
                                     <includes>
                                         <include>environment.properties</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>src/test/resources/allure-results</directory>
+                                    <includes>
+                                        <include>categories.json</include>
                                     </includes>
                                 </resource>
                             </resources>
