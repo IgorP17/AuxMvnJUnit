@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import org.example.MyMath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -26,4 +27,17 @@ public class MyMathTest {
     public void testFromFile(int a, int b, int expected){
         Assertions.assertEquals(MyMath.divide(a, b), expected);
     }
+
+    @Step("Проверка суммы числа {num1} и числа {num2}")
+    public static void checkSumStep(int num1, int num2, int expectedResult) {
+        Assertions.assertEquals(expectedResult, MyMath.sum(num1, num2), "Результат не соответствует ожидаемому значению");
+    }
+
+    @Test
+    public void sumTest() {
+        checkSumStep(3, 2, 5);
+        checkSumStep(5, 4, 9);
+    }
+
+
 }

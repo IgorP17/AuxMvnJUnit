@@ -7,4 +7,8 @@ public class MyMath {
         }
         return n1 / n2;
     }
+
+    public static int sum(int a, int b) {
+        return a + b;
+    }
 }
