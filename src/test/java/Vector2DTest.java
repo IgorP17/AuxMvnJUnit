@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.example.Vector2D;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,6 +36,7 @@ public class Vector2DTest {
     }
 
     @Test
+    @Severity(value = SeverityLevel.BLOCKER)
     public void thisTestWillFail2(){
         Assertions.assertEquals("aaa", "3");
     }

@@ -126,6 +126,7 @@ public class MyMathTest {
     @Links(value = {@Link(name = "Ссылка1", url = "http://sberbank.ru"),
             @Link(name = "Ссылка2", url = "http://yandex.ru")})
     @Owner(value = "Пупкин Валерий Иванович")
+    @Severity(value = SeverityLevel.CRITICAL)
     public void linksTest() {
         Assertions.assertTrue(1 == 1);
     }
