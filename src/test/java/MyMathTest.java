@@ -115,4 +115,15 @@ public class MyMathTest {
             Assertions.assertTrue(false);
         }
     }
+
+    /*
+        Linking
+     */
+
+    @Test
+    @Issue(value = "FGY-4627")
+    @TmsLinks({@TmsLink(value = "TL-135"), @TmsLink(value = "TL-158")})
+    public void linksTest() {
+        Assertions.assertTrue(1 == 1);
+    }
 }
