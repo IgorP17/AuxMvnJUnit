@@ -130,6 +130,7 @@
                                     <directory>src/test/resources</directory>
                                     <includes>
                                         <include>environment.properties</include>
+                                        <include>allure.properties</include>
                                     </includes>
                                 </resource>
                                 <resource>
