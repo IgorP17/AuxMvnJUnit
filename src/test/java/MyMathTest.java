@@ -1,4 +1,5 @@
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.example.MyMath;
 import org.junit.jupiter.api.Assertions;
@@ -51,6 +52,7 @@ public class MyMathTest {
         Example of attachments
      */
     @Attachment
+//    @Attachment(value = "Вложение", type = "application/json", fileExtension = ".txt")
     public static byte[] getBytes(String resourceName) throws IOException {
         return Files.readAllBytes(Paths.get("src/test/resources", resourceName));
     }
@@ -60,9 +62,11 @@ public class MyMathTest {
         Assertions.assertTrue(str1.equals(str2), "Строки не эквивалентны");
         getBytes("picture.png");
         getBytes("text.txt");
+//        Allure.addAttachment("Результат", "text/plain", link);
     }
 
     @Test
+    @Description(value = "Тест с аттачментами")
     public void testWithAttachment() throws IOException {
         String darkSouls = "Dark souls 3";
         checkStringEqualsStep(darkSouls, darkSouls);
