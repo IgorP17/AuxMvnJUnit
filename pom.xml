@@ -19,6 +19,7 @@
         <aspectj.version>1.9.9.1</aspectj.version>
         <allure-junit5.version>2.21.0</allure-junit5.version>
         <allure-maven.version>2.11.2</allure-maven.version>
+        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
     </properties>
 
     <dependencyManagement>
