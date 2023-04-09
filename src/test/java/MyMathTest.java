@@ -9,6 +9,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class MyMathTest {
@@ -40,6 +41,7 @@ public class MyMathTest {
         Assertions.assertEquals(expectedResult, MyMath.sum(num1, num2), "Результат не соответствует ожидаемому значению");
     }
 
+    // @Epic → @Feature → @Story
     @Epic(value = "Математика")
     @Feature(value = "Простые математические операции")
     @Story(value = "Сложение")
@@ -100,4 +102,17 @@ public class MyMathTest {
         checkStringEqualsStep(darkSouls, darkSouls);
     }
 
+    /*
+        Unstable test
+     */
+    @Test
+    @Flaky
+    public void testDemoFlaky() {
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 2);
+        if (randomNum == 0) {
+            Assertions.assertTrue(true);
+        } else {
+            Assertions.assertTrue(false);
+        }
+    }
 }
