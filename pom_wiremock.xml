@@ -46,6 +46,13 @@
             <artifactId>allure-junit5</artifactId>
             <version>${allure-junit5.version}</version>
         </dependency>
+        <!-- rest assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -105,7 +112,7 @@
                     <!-- include and exclude tests -->
                     <!--  mvn clean test -f .\pom_2.xml -->
                     <includes>
-                        <include>**/Message*.java</include>
+                        <include>org/wiremock/**</include>
                     </includes>
                     <!--
                     <excludes>
