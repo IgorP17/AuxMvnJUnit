@@ -116,6 +116,17 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
+                    <!-- include and exclude tests -->
+                    <!--  mvn clean test -f .\pom_2.xml -->
+                    <includes>
+                        <include>org/selenide/**</include>
+                    </includes>
+                    <!--
+                    <excludes>
+                        <exclude>**/TestCircle.java</exclude>
+                        <exclude>**/TestSquare.java</exclude>
+                    </excludes>
+                    -->
                 </configuration>
             </plugin>
             <plugin>
