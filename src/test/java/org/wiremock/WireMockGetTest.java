@@ -4,18 +4,18 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class WireMockGetTest {
 
-    @Test
-    public void test() {
-
-        final String path = Settings.getPath;
-        final int respCode = 200;
-        final String bodyPart = "Base url";
+    @ParameterizedTest(name = "{index}. Path {0}, resp {1}, body {2}")
+    @MethodSource("provideData")
+    public void test(String path, int respCode, String bodyPart) {
 
         //        System.out.println("=== Running test with params path = {}, respCode = {}", path, respCode);
         RequestSpecification request = RestAssured.given();
@@ -53,4 +53,11 @@ public class WireMockGetTest {
         System.out.println("=== END Response ===");
     }
 
+    private static Stream<Arguments> provideData() {
+        return Stream.of(
+                Arguments.of(Settings.getPath, 200, "Base url"),
+                Arguments.of(Settings.getPath + Settings.getPathParams, 200, "БУЙА"),
+                Arguments.of("/some_wrong_path", 404, "Request was not matched")
+                );
+    }
 }
