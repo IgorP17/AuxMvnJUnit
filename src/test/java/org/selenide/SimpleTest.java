@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.getUserAgent;
 import static com.codeborne.selenide.Selenide.open;
 public class SimpleTest {
 
@@ -19,7 +20,9 @@ public class SimpleTest {
     @MethodSource("provideData")
     public void userCanSearch(String searchString, String browser) {
         Configuration.browser = browser;
+
         open("https://duckduckgo.com");
+        System.out.println("==Using " + Configuration.browser + "; UserAgent = " + getUserAgent());
         new GooglePage().searchFor(searchString);
 
         SearchResultPage results = new SearchResultPage();
