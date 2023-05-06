@@ -1,3 +1,4 @@
 set PATH=D:\graphviz\bin;%PATH%
 
-dot -Tpng dotfile.dot > viz.png
+REM dot -Tpng dotfile.dot > viz.png
+dot -Tsvg dotfile.dot > viz.svg
