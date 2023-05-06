@@ -1,0 +1,84 @@
+digraph Java {
+	rankdir="TB";
+	node[shape=plaintext]
+	n1[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='3'>LinkedList</td>
+			</tr>
+			<tr>
+				<td>modCount: 3</td>
+			</tr>
+			<tr>
+				<td>size: 3</td>
+			</tr>
+		</table>
+	>];
+	n2[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='2'>Node</td>
+			</tr>
+			<tr>
+				<td>prev: null</td>
+			</tr>
+		</table>
+	>];
+	n3[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='2'>Integer</td>
+			</tr>
+			<tr>
+				<td>value: 1</td>
+			</tr>
+		</table>
+	>];
+	n2 -> n3[label="item",fontsize=12];
+	n4[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td>Node</td>
+			</tr>
+		</table>
+	>];
+	n5[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='2'>Integer</td>
+			</tr>
+			<tr>
+				<td>value: 3</td>
+			</tr>
+		</table>
+	>];
+	n4 -> n5[label="item",fontsize=12];
+	n6[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='2'>Node</td>
+			</tr>
+			<tr>
+				<td>next: null</td>
+			</tr>
+		</table>
+	>];
+	n7[label=<
+		<table border='0' cellborder='1' cellspacing='0'>
+			<tr>
+				<td rowspan='2'>Integer</td>
+			</tr>
+			<tr>
+				<td>value: 2</td>
+			</tr>
+		</table>
+	>];
+	n6 -> n7[label="item",fontsize=12];
+	n6 -> n4[label="prev",fontsize=12];
+	n4 -> n6[label="next",fontsize=12];
+	n4 -> n2[label="prev",fontsize=12];
+	n2 -> n4[label="next",fontsize=12];
+	n1 -> n2[label="first",fontsize=12];
+	n1 -> n6[label="last",fontsize=12];
+}
+
