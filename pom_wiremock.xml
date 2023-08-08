@@ -60,6 +60,12 @@
             <version>6.13.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- lightweight java visualizer -->
+        <dependency>
+            <groupId>org.atp-fivt</groupId>
+            <artifactId>ljv</artifactId>
+            <version>1.04</version>
+        </dependency>
     </dependencies>
 
     <build>
