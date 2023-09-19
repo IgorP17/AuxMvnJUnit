@@ -25,9 +25,9 @@ public class MessageTest {
                 Arguments.of(generateDefaultMessage(), generateDefaultMessage()),
                 Arguments.of(
                         generateDefaultMessage()
-                                .setField(MyMessageFields.FIELD_1, "ААААА крокодилы"),
+                                .setField(MyMessageFields.FIELD_1, "ААААА крокодилы SOME changes"),
                         generateDefaultMessage()
-                                .setField(MyMessageFields.FIELD_1, "ААААА крокодилы")),
+                                .setField(MyMessageFields.FIELD_1, "ААААА крокодилы dsfdsfdsfsdffdsfdsfsfds")),
                 Arguments.of(
                         generateDefaultMessage()
                                 .setField(MyMessageFields.FIELD_2, "ААААА бегемоты"),
